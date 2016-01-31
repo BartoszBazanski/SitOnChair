@@ -3,7 +3,6 @@ var main = function(){
     var arrowRight = $('.arrow-right');
     var arrowLeft = $('.arrow-left');
     var slides = $('.slide');
-    var currentSlide= slides.siblings('.current');
     slides.siblings('.current').css({
         left: "0",
         opacity: "1"
@@ -14,63 +13,51 @@ var main = function(){
     })
     // Slider
     function slideLeft(element){
-        element.siblings('.current').animate({
+        var currentSlide = element.siblings('.current');
+        element.siblings('.slide:not(.current)').css({
+            left: "100%",
+            opacity: "0"
+        })
+        currentSlide.animate({
                 left: "-100%",
                 opacity: "0"
             }, 1000);
+        if(currentSlide.is(element.last())){
+            currentSlide.removeClass('current');
+            element.first().animate({
+                left: "0",
+                opacity: "1"
+            }, 1000).addClass('current');
+        } else {
+            currentSlide.removeClass('current');
             currentSlide.next().animate({
                 left: "0",
                 opacity: "1"
-            }, 1000);
+            }, 1000).addClass('current');
+        }
     }
     function slideRight(element){
-        element.siblings('.current').animate({
-                left: "100%",
-                opacity: "0"
-            }, 1000);
+        var currentSlide = element.siblings('.current');
+        element.siblings('.slide:not(.current)').css({
+            left: "-100%",
+            opacity: "0"
+        })
+        currentSlide.animate({
+            left: "100%",
+            opacity: "0"
+        }, 1000);
+        if(currentSlide.is(element.first())){
+            currentSlide.removeClass("current");
+            element.last().animate({
+                left: "0",
+                opacity: "1"
+            }, 1000).addClass("current");
+        } else {
+            currentSlide.removeClass("current");
             currentSlide.prev().animate({
                 left: "0",
                 opacity: "1"
-            }, 1000);
-    }
-    function resetLeft(element){
-        for(var i = element.length - 1; i >=0; i--){
-            if(element.eq(i).is(element.first())){
-                element.eq(i).animate({
-                    left: "0",
-                    opacity: "1"
-                }, 1000)
-            } else if(element.eq(i).is(element.last())){
-                element.eq(i).animate({
-                    left: "100%",
-                    opacity: "0"
-                }, 1000)
-            } else {
-                element.eq(i).css({
-                    left: "100%",
-                    opacity: "0"
-                })
-            }
-        }
-    }
-    function resetRight(element){
-        for(var i = element.length - 1; i >=0; i--){
-            if(element.eq(i).is(element.last())){
-                element.eq(i).animate({
-                    left: "0",
-                    opacity: "1"
-                }, 1000)
-            } else if(element.eq(i).is(element.first())){
-                element.eq(i).animate({
-                    left: "-100%",
-                    opacity: "0"
-                }, 1000)
-            } else {
-                element.eq(i).css({
-                    left: "-100%",
-                    opacity: "0"
-                })
-            }
+            }, 1000).addClass("current");
         }
     }
     $('.current').show();
@@ -85,34 +72,10 @@ var main = function(){
         $(this).children('.panel').fadeIn('fast');
     });
     arrowRight.click(function(){
-        if(slides.siblings('.current').is(slides.last())){
-            console.log("not good");
-            resetLeft(slides);
-            currentSlide.removeClass('current');
-            slides.first().addClass('current');
-            currentSlide = slides.siblings('.current');
-        } else {
-            console.log('good');
-            slideLeft(slides);
-            currentSlide.removeClass('current');
-            currentSlide.next().addClass('current');
-            currentSlide = slides.siblings('.current');
-        }
+        slideLeft(slides);
     })
     arrowLeft.click(function(){
-        if(slides.siblings('.current').is(slides.first())){
-            console.log("not good");
-            resetRight(slides);
-            currentSlide.removeClass('current');
-            slides.last().addClass('current');
-            currentSlide = slides.siblings('.current');
-        } else {
-            console.log('good');
-            slideRight(slides);
-            currentSlide.removeClass('current');
-            currentSlide.prev().addClass('current');
-            currentSlide = slides.siblings('.current');
-        }
+        slideRight(slides);
     })
     //Compose your chair
     //Dropdown lists
