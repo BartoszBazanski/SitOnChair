@@ -1,0 +1,608 @@
+@font-face {
+  font-family: 'ralewaybold';
+  src: url("../fonts/raleway-bold-webfont.eot");
+  src: url("../fonts/raleway-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-bold-webfont.woff2") format("woff2"), url("../fonts/raleway-bold-webfont.woff") format("woff"), url("../fonts/raleway-bold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ralewayextralight';
+  src: url("../fonts/raleway-extralight-webfont.eot");
+  src: url("../fonts/raleway-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-extralight-webfont.woff2") format("woff2"), url("../fonts/raleway-extralight-webfont.woff") format("woff"), url("../fonts/raleway-extralight-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ralewayregular';
+  src: url("../fonts/raleway-regular-webfont.eot");
+  src: url("../fonts/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-regular-webfont.woff2") format("woff2"), url("../fonts/raleway-regular-webfont.woff") format("woff"), url("../fonts/raleway-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "ralewayregular", sans-serif; }
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 980px; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+/* menu */
+header {
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 20px 0 30px 0; }
+
+.logo {
+  float: left;
+  font-family: 'ralewaybold', sans-serif; }
+
+nav {
+  float: right;
+  font-family: 'ralewaybold', sans-serif; }
+  nav li {
+    position: relative; }
+
+.sub-menu-arrow {
+  border-bottom: 8px solid black;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  display: none;
+  height: 0;
+  position: absolute;
+  right: 45px;
+  top: 220%;
+  width: 0; }
+
+.sub-menu {
+  background: black;
+  display: none;
+  position: absolute;
+  top: 270%;
+  line-height: 30px;
+  text-transform: none;
+  text-align: left;
+  width: 150px;
+  left: 10px;
+  font-size: 14px;
+  z-index: 2; }
+  .sub-menu li {
+    margin: 0;
+    padding-left: 20px; }
+
+li {
+  display: inline-block;
+  padding: 0 30px 0 30px; }
+
+.slider span,
+header span {
+  color: #27c7ab; }
+
+/* slider */
+.slider {
+  overflow: hidden;
+  position: relative;
+  background: white;
+  background: -moz-linear-gradient(top, white 0%, #dbdbdb 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, white), color-stop(100%, #dbdbdb));
+  background: -webkit-linear-gradient(top, white 0%, #dbdbdb 100%);
+  background: -o-linear-gradient(top, white 0%, #dbdbdb 100%);
+  background: -ms-linear-gradient(top, white 0%, #dbdbdb 100%);
+  background: linear-gradient(to bottom, white 0%, #dbdbdb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb', GradientType=0 );
+  height: 450px; }
+  .slider img {
+    display: inline-block;
+    margin-top: 80px; }
+  .slider h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px; }
+    .slider h1 span {
+      font-family: "ralewaybold", sans-serif; }
+  .slider p {
+    text-align: center;
+    font-family: "ralewayextralight", sans-serif;
+    line-height: 160%;
+    font-size: 90%; }
+  .slider .button-slider {
+    height: 45px;
+    width: 230px;
+    background-color: #27c7ab;
+    color: white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 13px;
+    margin: 40px auto 0;
+    font-size: 20px; }
+  .slider .arrow-right {
+    right: 30px; }
+  .slider .arrow-left{
+    z-index: 5;
+  }
+.arrow {
+  width: 50px;
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  color: #27c7ab;
+  font-size: 70px;
+  font-family: "ralewayextralight", sans-serif;
+  top: 190px;
+  cursor: pointer; }
+
+.slider-content {
+  width: 400px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 130px;
+  }
+
+.button-slider {
+  height: 45px;
+  width: 230px;
+  background-color: #27c7ab;
+  color: white;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 13px;
+  margin: 40px auto 0;
+  font-size: 20px; }
+.slide {
+  position: absolute;
+  width: 100%;
+}
+/* main */
+main {
+  margin: 20px 0 20px 0; }
+  main .container .title-top {
+    font-family: "ralewaybold", sans-serif;
+    padding-top: 20px;
+    padding-left: 8px; }
+  main .container .underline {
+    position: absolute;
+    top: 160px;
+    height: 5px;
+    width: 130px;
+    background-color: #27c7ab;
+    left: 5px; }
+
+.box {
+  display: inline-block;
+  width: 310px;
+  margin: 5px;
+  font-size: 15px;
+  position: relative;
+  vertical-align: top; }
+  .box img {
+    width: 310px;
+    height: 215px; }
+
+.box12 .title {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  top: 133px;
+  height: 55px;
+  width: 310px;
+  padding: 10px 0 0 5px;
+  font-family: "ralewaybold", sans-serif; }
+
+.container .box3 {
+  padding-bottom: 10px;
+  border: 1px solid #dadada; }
+  .container .box3 .underline {
+    position: absolute;
+    top: 38px;
+    height: 5px;
+    width: 130px;
+    background-color: #27c7ab;
+    left: 8px; }
+  .container .box3 p {
+    margin-top: 20px;
+    font-family: "ralewayextralight", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    padding-left: 8px;
+    color: #565656; }
+
+/* prices */
+.prices {
+  background-color: #f1f1f1;
+  height: 700px; }
+  .prices .underline {
+    position: absolute;
+    top: 65px;
+    height: 5px;
+    width: 300px;
+    background-color: #27c7ab; }
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 19px;
+  height: 60px;
+  padding-top: 40px;
+  margin-bottom: 40px; }
+
+.plan {
+  display: inline-block;
+  width: 310px;
+  height: 475px;
+  border: 1px solid #d6d6d6;
+  margin: 50px 5px 0;
+  position: relative;
+  background-color: #f1f1f1; }
+  .plan p {
+    text-transform: uppercase;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 30px;
+    color: #27c7ab; }
+  .plan sup {
+    vertical-align: top;
+    line-height: 22px; }
+
+.circle {
+  border-radius: 50%;
+  position: absolute; }
+
+.big-circle {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #d8d8d8;
+  top: -36px;
+  left: 130px;
+  background-color: white; }
+
+.small-circle {
+  height: 24px;
+  width: 24px;
+  background-color: #d8d8d8;
+  top: -23px;
+  left: 143px; }
+
+.price {
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  margin: 45px auto 0;
+  padding-top: 17px;
+  font-family: "ralewaybold", sans-serif;
+  background-color: white;
+  border: 1px solid #c3c3c3;
+  color: #c3c3c3;
+  line-height: 64%;
+  font-size: 13px; }
+  .price span {
+    font-size: 35px;
+    color: #c3c3c3;
+    line-height: 140%;
+    font-family: "ralewaybold", sans-serif; }
+
+table {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  background: white; }
+
+tr td {
+  padding: 10px;
+  color: #a6a6a6;
+  font-size: 20px; }
+
+tr:nth-of-type(odd) td {
+  background-color: #e4e4e4; }
+
+tr:nth-of-type(even) td {
+  background-color: #f9f9f9; }
+
+.button-plan {
+  height: 34px;
+  width: 115px;
+  background-color: #27c7ab;
+  color: white;
+  border-radius: 8px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 9px;
+  margin: auto;
+  font-size: 15px;
+  position: absolute;
+  bottom: 20px;
+  left: 95px; }
+
+.plan2 {
+  border: 1px solid #27c7ab;
+  background-color: #27c7ab; }
+  .plan2 p {
+    color: white; }
+  .plan2 .big-circle {
+    background-color: #27c7ab;
+    border: none; }
+  .plan2 .small-circle {
+    background-color: white; }
+  .plan2 .price {
+    color: #27c7ab; }
+  .plan2 .price span {
+    color: #27c7ab; }
+  .plan2 tr:nth-of-type(odd) td {
+    background-color: white; }
+  .plan2 tr:nth-of-type(even) td {
+    background-color: #f1f1f1; }
+  .plan2 .button-plan {
+    background-color: white;
+    color: #27c7ab; }
+
+/* compose your chair */
+#chair-name {
+  color: #27c7ab;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.compose {
+  background-color: #e5e5e5;
+  vertical-align: top;
+  height: 500px; }
+  .compose .checkbox {
+    position: absolute;
+    left: -23px;
+    z-index: 2; }
+    .compose .checkbox label {
+      font-size: 30px;
+      color: gray;
+      padding-top: 10px; }
+  .compose table {
+    height: 230px;
+    position: absolute;
+    top: -5px; }
+  .compose tr td {
+    background-color: white;
+    font-family: "ralewayextralight", sans-serif;
+    color: black;
+    text-align: left; }
+  .compose tr td:nth-last-of-type(1) {
+    color: #27c7ab;
+    border-left: 1px solid lightgray;
+    width: 120px; }
+  .compose tr:last-of-type {
+    border-top: 1px solid lightgray; }
+    .compose tr:last-of-type td:last-child {
+      font-family: "ralewayregular", sans-serif;
+      border-left: none; }
+  .compose input {
+    height: 70px;
+    width: 320px;
+    background-color: #27c7ab;
+    color: white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 23px;
+    outline: none;
+    border: none;
+    position: absolute;
+    bottom: 53px;
+    cursor: pointer; }
+
+.section-title-right {
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 5px; }
+
+.underline-right {
+  right: 5px; }
+
+.compose-left {
+  width: 326px;
+  height: 500px;
+  display: inline-block;
+  margin-bottom: 90px;
+  vertical-align: top; }
+
+.dropdown {
+  height: 63px;
+  width: 320px;
+  border: 2px solid #b8e7da;
+  font-size: 34px;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 0;
+  background-color: white;
+  position: relative;
+  color: #666666; }
+  .dropdown dd {
+    display: none;
+    font-size: 20px;
+    color: black;
+    text-align: left;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #c8c8c8;
+    z-index: 3;
+    padding-top: 10px; }
+  .dropdown dt span {
+    color: #e0e0e0;
+    font-family: "ralewayextralight", sans-serif; }
+  .dropdown li {
+    font-family: "ralewayextralight", sans-serif;
+    padding-left: 15px;
+    padding-right: 100px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    max-width: 320px;
+    cursor: pointer; }
+
+.blue-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 8px 0 8px;
+  border-color: #27c7ac transparent transparent transparent;
+  position: absolute;
+  right: -5px;
+  top: 5px;
+  margin: 20px;
+  cursor: pointer; }
+
+.compose-middle {
+  display: inline-block;
+  width: 320px;
+  position: relative;
+  vertical-align: top; }
+  .compose-middle img {
+    position: absolute;
+    left: 20px; }
+
+.compose-right {
+  width: 325px;
+  height: 405px;
+  display: inline-block;
+  margin: 0 0 90px 0;
+  position: relative; }
+
+#transport-yes p,
+#transport-price p {
+  display: none;
+  font-family: "ralewayextralight", sans-serif; }
+
+/* contact */
+.compose .underline,
+.contact .underline {
+  position: absolute;
+  top: 65px;
+  height: 5px;
+  width: 300px;
+  background-color: #27c7ab; }
+
+select,
+input {
+  display: inline-block; }
+
+.contact-left {
+  width: 600px;
+  height: 350px;
+  display: inline-block;
+  margin-bottom: 90px;
+  vertical-align: top; }
+  .contact-left input,
+  .contact-left textarea {
+    height: 63px;
+    width: 596px;
+    border: 2px solid #b8e7da;
+    font-size: 34px;
+    font-family: "ralewayextralight", sans-serif;
+    margin: 20px 0;
+    padding: 15px; }
+  .contact-left textarea {
+    height: 180px;
+    max-height: 180px;
+    max-width: 596px; }
+
+.contact-right {
+  width: 375px;
+  height: 405px;
+  display: inline-block;
+  margin: 0 0 90px 0;
+  position: relative;
+  vertcial-align: top; }
+  .contact-right img {
+    padding: 0 50px; }
+  .contact-right input {
+    height: 70px;
+    width: 320px;
+    background-color: #27c7ab;
+    color: white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 13px;
+    font-size: 23px;
+    outline: none;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 28px; }
+    .contact-right input:focus, .contact-right input:hover, .contact-right input:active {
+      border: none;
+      outline: none; }
+
+.checkbox {
+  position: relative;
+  padding: 30px; }
+  .checkbox input {
+    display: block;
+    opacity: 0;
+    height: 48px;
+    position: absolute;
+    width: 48px;
+    cursor: pointer; }
+  .checkbox label {
+    display: block;
+    padding-left: 65px;
+    position: relative;
+    font-size: 17px;
+    color: #cecece;
+    line-height: 120%;
+    padding-top: 3px;
+    font-family: "ralewayextralight", sans-serif;
+    cursor: pointer; }
+    .checkbox label::before, .checkbox label::after {
+      border: 1px solid #27c7ab;
+      content: "";
+      display: block;
+      left: 0;
+      height: 48px;
+      position: absolute;
+      width: 48px;
+      top: 0; }
+    .checkbox label::after {
+      background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
+      border: 0;
+      display: none; }
+  .checkbox input:checked + label::after {
+    display: block; }
+
+/* footer */
+footer .container {
+  position: relative; }
+  footer .container * {
+    display: inline-block; }
+
+.copyright {
+  font-size: 13px;
+  color: #9a9a9a;
+  padding-bottom: 23px; }
+
+.footer-logo {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #9a9a9a;
+  position: absolute;
+  right: 20px;
+  bottom: 23px; }
+  .footer-logo span {
+    color: #9a9a9a;
+    font-family: "ralewaybold", sans-serif; }
+
+.social {
+  position: absolute;
+  right: 190px;
+  bottom: 20px; }
+
+.show {
+  opacity: 1; }
+
+/*# sourceMappingURL=style.css.map */
