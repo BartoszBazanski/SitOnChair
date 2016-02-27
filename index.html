@@ -1,284 +1,37 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html>
 <head>
-    <meta charset="utf-8">
     <title>Sit On Chair</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-
 <body>
-
-    <header>
+    <nav>
         <div class="container">
-            <a class="logo"href="#">Sit <span>On</span> Chair</a>
-            <nav class="menu">
-                <ul>
-                    <li>
-                        <a href="#" class="about">O firmie</a>
-                        <div class="sub-menu-arrow"> </div>
-                        <ul class="sub-menu">
-                            <li><a href="#">Aktualności</a></li>
-                            <li><a href="#">Nasz team</a></li>
-                            <li><a href="#">Historia</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Galeria</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                <h1>Sit <span>on</span> chair</h1>
+                <ul id="navigation">
+                    <li>O firmie</li>
+                    <li>Galeria</li>
+                    <li>Kontakt</li>
                 </ul>
-            </nav>
         </div>
-    </header>
-
-    <section class="slider area">
-        <div class="container">
-            <div class="arrow arrow-left"> &lt </div>
-            <div class="slide current">
-                <img src="images/black_chair.png">
-                <div class="slider-content">
-                    <h1>Sit <span>on</span> our <span>chair</span></h1>
-                    <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.</p>
-                    <div class="button-slider"><a href="#">Zobacz więcej</a></div>
+    </nav>
+    <section id="slider">
+        <div class="slider_content container">
+            <div class="arrows arrow-left">&lt</div>
+            <div class="slides">
+                <div class="chair-image">
+                    <img src="images/black_chair.png" />
+                </div>
+                <div class="chair-description">
+                    <h2>Sit <span>on</span> our <span>chair</span></h2>
+                    <p></p>
+                    <button>Zobacz więcej</button>
                 </div>
             </div>
-            <div class="slide">
-                <img src="images/orange.png">
-                <div class="slider-content">
-                    <h1>Sit <span>on</span> our <span>chair</span></h1>
-                    <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.</p>
-                    <div class="button-slider"><a href="#">Zobacz więcej</a></div>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="images/red.png">
-                <div class="slider-content">
-                    <h1>Sit <span>on</span> our <span>chair</span></h1>
-                    <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.</p>
-                    <div class="button-slider"><a href="#">Zobacz więcej</a></div>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="images/orange.png">
-                <div class="slider-content">
-                    <h1>Sit <span>on</span> our <span>chair</span></h1>
-                    <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.</p>
-                    <div class="button-slider"><a href="#">Ostatni Sorki</a></div>
-                </div>
-            </div>
-            <div class="arrow arrow-right"> &gt </div>
+            <div class="arrows arrow-right">&gt</div>
         </div>
     </section>
-
-    <main class="area">
-        <div class="container">
-
-            <div class="box box12">
-                <a href="#"><img src="images/box1_img.jpg"></a>
-                <div class="panel">
-                    <div class="title">Chair CLAIR</div>
-                    <div class="underline"> </div>
-                </div>
-            </div>
-            <div class="box box12">
-                <a href="#"><img src="images/box2_img.jpg"></a>
-                <div class="panel">
-                    <div class="title">Chair MARGARITA</div>
-                    <div class="underline"> </div>
-                </div>
-            </div>
-            <a href="#">
-                <div class="box box3">
-                    <div class="title title-top">Finds all inputs</div>
-                    <div class="underline"> </div>
-                    <p>Lorem ipsum dolor sit amet eros. Suspendisse fermentum, enim non nulla. Phasellus consequat. Nulla facilisi. Morbi mattis at, volutpat ultricies lacinia sit amet, nonummy a, dolor. Quisque ut venenatis arcu.</p>
-                    <p>Maecenas semper lobortis. Vivamus ut lacus rhoncus et, varius egestas, nulla in enim. Sed placerat.</p>
-                </div>
-            </a>
-        </div>
-    </main>
-
-    <section class="prices area">
-        <div class="container">
-            <p class="section-title">Cennik</p>
-            <div class="underline"> </div>
-            <div class="plan plan1">
-                <div class="circle big-circle"> </div>
-                <div class="circle small-circle"> </div>
-                <p>Basic plan</p>
-                <div class="price"><span>21</span><sup>99</sup> <br> PLN/MSC</div>
-                <table>
-                    <tr>
-                        <td>Zakup towaru + dowóz</td>
-                    </tr>
-                    <tr>
-                        <td>Serwis</td>
-                    </tr>
-                </table>
-                <div class="button-plan"><a href="#">Dołącz</a></div>
-            </div>
-            <div class="plan plan2">
-                <div class="circle big-circle"> </div>
-                <div class="circle small-circle"> </div>
-                <p>Standard plan</p>
-                <div class="price"><span>46</span><sup>99</sup> <br> PLN/MSC</div>
-                <table>
-                    <tr>
-                        <td>Zakup towaru + dowóz</td>
-                    </tr>
-                    <tr>
-                        <td>Serwis</td>
-                    </tr>
-                    <tr>
-                        <td>Gwarancja 5 lat</td>
-                    </tr>
-                </table>
-                <div class="button-plan"><a href="#">Dołącz</a></div>
-            </div>
-
-            <div class="plan plan3">
-                <div class="circle big-circle"> </div>
-                <div class="circle small-circle"> </div>
-
-                <p>Advance plan</p>
-                <div class="price"><span>200</span><sup>25</sup> <br> PLN/MSC</div>
-                <table>
-                    <tr>
-                        <td>Zakup towaru + dowóz</td>
-                    </tr>
-                    <tr>
-                        <td>Serwis</td>
-                    </tr>
-                    <tr>
-                        <td>Gwarancja 6 lat</td>
-                    </tr>
-                    <tr>
-                        <td>Porady projektanta</td>
-                    </tr>
-                </table>
-                <div class="button-plan"><a href="#">Dołącz</a></div>
-            </div>
-        </div>
-
-
-    </section>
-
-    <section class="compose area">
-        <div class="container">
-            <p class="section-title">Skomponuj swoje krzesło</p>
-            <div class="underline"> </div>
-            <p class="section-title section-title-right">Podsumowanie</p>
-            <div class="underline underline-right"> </div>
-
-            <div class="compose-left">
-                <dl id="chair-pick" class="dropdown">
-                    <dt><span>Wybierz rodzaj</span><div class="blue-arrow"></div></dt>
-                    <dd>
-                        <ul>
-                            <li data-chair="Clair" data-chair-price="2400">Clair</li>
-                            <li data-chair="Margarita" data-chair-price="2200">Margarita</li>
-                            <li data-chair="Selena" data-chair-price="2000">Selena</li>
-                        </ul>
-                    </dd>
-                </dl>
-
-                <dl id="color-pick" class="dropdown">
-                    <dt><span>Wybierz kolor</span><div class="blue-arrow"></div></dt>
-                    <dd>
-                        <ul>
-                            <li data-color="Czerwony" data-color-price="0">Czerwony</li>
-                            <li data-color="Czarny" data-color-price="0">Czarny</li>
-                            <li data-color="Szary" data-color-price="0">Szary</li>
-                        </ul>
-                    </dd>
-                </dl>
-
-                <dl id="fabric-pick" class="dropdown">
-                    <dt><span>Wybierz materiał</span><div class="blue-arrow"></div></dt>
-                    <dd>
-                        <ul>
-                            <li data-fabric="Skóra" data-fabric-price="1000">Skóra</li>
-                            <li data-fabric="Alcantara" data-fabric-price="1500">Alcantara</li>
-                            <li data-fabric="Tkanina" data-fabric-price="0">Tkanina</li>
-                        </ul>
-                    </dd>
-                </dl>
-
-
-                <div class="checkbox check-box">
-                    <input type="checkbox" id="transport" data-transport-price="200">
-                    <label for="transport">Transport</label>
-                </div>
-            </div>
-
-            <div class="compose-middle">
-                <img src="images/red_chair.png">
-            </div>
-
-            <div class="compose-right">
-                <table>
-                    <tr>
-                        <td id="chair-name">Twój fotel</td>
-                        <td id="chair-price"></td>
-                    </tr>
-                    <tr>
-                        <td id="chair-color"></td>
-                        <td id="color-price"></td>
-                    </tr>
-                    <tr>
-                        <td id="chair-fabric"></td>
-                        <td id="fabric-price"></td>
-                    </tr>
-                    <tr>
-                        <td id="transport-yes"><p>Transport</p></td>
-                        <td id="transport-price"><p>0</p></td>
-                    </tr>
-                    <tr>
-                        <td>SUMA</td>
-                        <td id="chair-sum"></td>
-                    </tr>
-                </table>
-
-                <input type="submit" value="ZAMAWIAM">
-            </div>
-        </div>
-    </section>
-
-    <section class="contact area">
-        <div class="container">
-            <p class="section-title">Kontakt</p>
-            <div class="underline"> </div>
-            <form>
-                <div class="contact-left">
-                    <input type="text" placeholder="Imię">
-                    <input type="email" placeholder="email">
-                    <textarea placeholder="Wiadomość" class="message"></textarea>
-                </div>
-                <div class="contact-right">
-                    <img src="images/red_chair.png">
-                    <div class="checkbox">
-                        <input type="checkbox" id="agree">
-                        <label for="agree">Zgadzam się na przetwarzanie danych osobowych</label>
-                    </div>
-                    <input type="submit" value="WYŚLIJ">
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <footer class="area">
-        <div class="container">
-            <p class="copyright">Copyright 2015 - All rights reserved - Sit On Chair</p>
-            <div class="social">
-                <a href="#"><img src="images/flickr.png"></a>
-                <a href="#"><img src="images/vimeo.png"></a>
-                <a href="#"><img src="images/pinterest.png"></a>
-                <a href="#"><img src="images/twitter.png"></a>
-            </div>
-            <div class="footer-logo">Sit <span>On</span> Chair</div>
-        </div>
-    </footer>
-
+    <footer></footer>
 </body>
 </html>

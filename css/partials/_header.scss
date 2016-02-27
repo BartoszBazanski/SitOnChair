@@ -1,0 +1,23 @@
+nav{
+    height: 50px;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    h1 {
+        font-size: 22px;
+        padding: 14px;
+        float: left;
+        span {
+            color: #27c7ab;
+        }
+    }
+    #navigation li{
+        float: right;
+        font-size: 18px;
+        padding: 16px;
+        list-style-type: none;
+        width: 150px;
+        text-align: center;
+    }
+}
