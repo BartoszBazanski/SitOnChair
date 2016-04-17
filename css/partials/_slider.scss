@@ -1,4 +1,26 @@
-.arrows {
-    font-size: 36px;
-    color: #27c7ab;
+#jumbotron{
+    .container{
+        position: relative;
+        .arrows {
+            position: absolute;
+            display: inline-block;
+            font-size: 5em;
+            color: $theme-color;
+            line-height: 1;
+            top: calc(50% - 45px);
+        }
+        .arrow-left{
+            left: 5px;
+        }
+        .arrow-right{
+            right: 5px;
+        }
+        .slider{
+            padding: 36px;
+            display: table;
+            .slider-element{
+
+            }
+        }
+    }
 }

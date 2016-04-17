@@ -41,9 +41,22 @@ header {
       header .navigation li ul {
         display: none; }
 
-.arrows {
-  font-size: 36px;
-  color: #27c7ab; }
+#jumbotron .container {
+  position: relative; }
+  #jumbotron .container .arrows {
+    position: absolute;
+    display: inline-block;
+    font-size: 5em;
+    color: #27c7ab;
+    line-height: 1;
+    top: calc(50% - 45px); }
+  #jumbotron .container .arrow-left {
+    left: 5px; }
+  #jumbotron .container .arrow-right {
+    right: 5px; }
+  #jumbotron .container .slider {
+    padding: 36px;
+    display: table; }
 
 body {
   font-size: 14px;
