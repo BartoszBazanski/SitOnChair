@@ -1,8 +1,17 @@
-@import "partials/reset";
+@import "modules/fonts";
+@import "modules/variables";
 @import "partials/header";
 @import "partials/slider";
 
-.container {
-    margin: 0 auto;
-    width: 80%;
+body{
+    font-size: 14px;
+    font-family: $font-regular;
+}
+a {
+    text-decoration: none;
+    color: white;
+    &:hover{
+        text-decoration: none;
+        color: white;
+    }
 }

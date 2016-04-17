@@ -1,37 +1,137 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Sit On Chair</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
-<body>
-    <nav>
-        <div class="container">
-                <h1>Sit <span>on</span> chair</h1>
-                <ul id="navigation">
-                    <li>O firmie</li>
-                    <li>Galeria</li>
-                    <li>Kontakt</li>
+    <head>
+        <title>Sit on Chair</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/vendor/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>Sit <span>On</span> Chair</h1>
+                <ul class="navigation">
+                    <li>
+                        <a href="#">O Firmie</a>
+                        <ul>
+                            <li><a href="#">Aktualnosci</a></li>
+                            <li><a href="#">Nasz Team</a></li>
+                            <li><a href="#">Historia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Kontakt</a></li>
                 </ul>
-        </div>
-    </nav>
-    <section id="slider">
-        <div class="slider_content container">
-            <div class="arrows arrow-left">&lt</div>
-            <div class="slides">
-                <div class="chair-image">
-                    <img src="images/black_chair.png" />
+            </div>
+        </header>
+        <section id="jumbotron">
+            <div class="container">
+                <div class="arrow-left">&lt</div>
+                <div class="slider">
+                    <div class="slider-element">
+                        <div class="element-image">
+                            <img src=""/>
+                        </div>
+                        <div class="element-text">
+                            <h3>Sit <span>On</span> our <span>chair</span></h3>
+                            <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ulticies. Curabitur et ligula. Ut molestie a, ultricies porta urna.</p>
+                            <button>Zobacz więcej</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="chair-description">
-                    <h2>Sit <span>on</span> our <span>chair</span></h2>
-                    <p></p>
-                    <button>Zobacz więcej</button>
+                <div class="arrow-rigth">&gt</div>
+            </div>
+        </section>
+        <section id="galery">
+            <div class="container">
+                <div class="col-md-4 images">
+                    <img src=""/>
+                    <div class="image-title">
+                        <h4>Chair CLAIR</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 images">
+                    <img src=""/>
+                    <div class="image-title">
+                        <h4>Chair MARGARITA</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 galery-text">
+                    <h4>Finds all inputs</h4>
+                    <p>Find all inputs that are not checked nad highlight the next span. Notice there in no change when clicking the checkboxes since no click events have been linked</p>
+                    <p>Notice there is no change when clicking the checkboxes since no click event have been.</p>
                 </div>
             </div>
-            <div class="arrows arrow-right">&gt</div>
-        </div>
-    </section>
-    <footer></footer>
-</body>
+        </section>
+        <section id="pricing">
+            <div class="container">
+                <h2>Cennik</h2>
+                <div class="payment-plan">
+                    <div class="upper-decoration"></div>
+                    <div class="payment-name">Basic Plan</div>
+                    <div class="price">
+                        <p>85<sup>99</sup></p>
+                        <p>pln/msc</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>Zakupy towaru + dowoz</li>
+                            <li>Serwis</li>
+                        </ul>
+                    </div>
+                    <button>Dołącz</button>
+                </div>
+                <div class="payment-plan">
+                    <div class="upper-decoration"></div>
+                    <div class="payment-name">Standard Plan</div>
+                    <div class="price">
+                        <p>95<sup>99</sup></p>
+                        <p>pln/msc</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>Zakupy towaru + dowoz</li>
+                            <li>Serwis</li>
+                            <li>Gwarancja 5 lat</li>
+                        </ul>
+                    </div>
+                    <button>Dołącz</button>
+                </div>
+                <div class="payment-plan">
+                    <div class="upper-decoration"></div>
+                    <div class="payment-name">Advance Plan</div>
+                    <div class="price">
+                        <p>211<sup>99</sup></p>
+                        <p>pln/msc</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>Zakupy towaru + dowoz</li>
+                            <li>Serwis</li>
+                            <li>Gwarancja 5 lat</li>
+                            <li>Porady projektanta</li>
+                        </ul>
+                    </div>
+                    <button>Dołącz</button>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <form>
+                <input placeholder="Imię">
+                <input placeholder="Email">
+                <textarea placeholder="Wiadomość"></textarea>
+                <input type="checkbox">Zgadam się na przetwarzanie danych osobowych<br>
+                <input type="submit" value="Wyślij">
+            </form>
+            <img src=""/>
+        </section>
+        <footer>
+            <p>Copyright 2014 | All Rigths Reserved - Sit On Chair</p>
+            <div class="socials"></div>
+            <h2>Sit On Chair</h2>
+        </footer>
+    </body>
 </html>

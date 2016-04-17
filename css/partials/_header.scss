@@ -1,23 +1,30 @@
-nav{
-    height: 50px;
+header{
     background-color: black;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
-    h1 {
-        font-size: 22px;
-        padding: 14px;
+    h1{
         float: left;
+        margin: 0;
+        font-size: 1.5em;
+        padding: 15px;
         span {
-            color: #27c7ab;
+            color: $theme-color;
         }
     }
-    #navigation li{
+    .navigation {
         float: right;
-        font-size: 18px;
-        padding: 16px;
-        list-style-type: none;
-        width: 150px;
-        text-align: center;
+        margin: 0;
+        li{
+            float: left;
+            font-size: 1.2em;
+            padding: 16px;
+            list-style-type: none;
+            width: 120px;
+            text-align: center;
+            ul{
+                display: none;
+            }
+        }
     }
 }
