@@ -1,4 +1,5 @@
 #jumbotron{
+    background: linear-gradient(white, white, white, lightgray);
     .container{
         position: relative;
         .arrows {
@@ -8,18 +9,29 @@
             color: $theme-color;
             line-height: 1;
             top: calc(50% - 45px);
+            cursor: pointer;
         }
         .arrow-left{
-            left: 5px;
+            left: 20px;
         }
         .arrow-right{
-            right: 5px;
+            right: 20px;
         }
         .slider{
             padding: 36px;
             display: table;
             .slider-element{
-
+                .element-image{
+                    text-align: center;
+                }
+                .element-text{
+                    text-align: center;
+                    padding: 25px;
+                    button{
+                        width: 275px;
+                        font-size: 1.8em;
+                    }
+                }
             }
         }
     }

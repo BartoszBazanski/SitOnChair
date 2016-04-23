@@ -16,6 +16,15 @@
   src: url("../fonts/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-regular-webfont.woff2") format("woff2"), url("../fonts/raleway-regular-webfont.woff") format("woff"), url("../fonts/raleway-regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
+button {
+  border: none;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: #27c7ab; }
+
 header {
   background-color: black;
   font-weight: bold;
@@ -26,8 +35,6 @@ header {
     margin: 0;
     font-size: 1.5em;
     padding: 15px; }
-    header h1 span {
-      color: #27c7ab; }
   header .navigation {
     float: right;
     margin: 0; }
@@ -41,26 +48,58 @@ header {
       header .navigation li ul {
         display: none; }
 
-#jumbotron .container {
-  position: relative; }
-  #jumbotron .container .arrows {
-    position: absolute;
-    display: inline-block;
-    font-size: 5em;
-    color: #27c7ab;
-    line-height: 1;
-    top: calc(50% - 45px); }
-  #jumbotron .container .arrow-left {
-    left: 5px; }
-  #jumbotron .container .arrow-right {
-    right: 5px; }
-  #jumbotron .container .slider {
-    padding: 36px;
-    display: table; }
+#jumbotron {
+  background: linear-gradient(white, white, white, lightgray); }
+  #jumbotron .container {
+    position: relative; }
+    #jumbotron .container .arrows {
+      position: absolute;
+      display: inline-block;
+      font-size: 5em;
+      color: #27c7ab;
+      line-height: 1;
+      top: calc(50% - 45px);
+      cursor: pointer; }
+    #jumbotron .container .arrow-left {
+      left: 20px; }
+    #jumbotron .container .arrow-right {
+      right: 20px; }
+    #jumbotron .container .slider {
+      padding: 36px;
+      display: table; }
+      #jumbotron .container .slider .slider-element .element-image {
+        text-align: center; }
+      #jumbotron .container .slider .slider-element .element-text {
+        text-align: center;
+        padding: 25px; }
+        #jumbotron .container .slider .slider-element .element-text button {
+          width: 275px;
+          font-size: 1.8em; }
 
 body {
   font-size: 14px;
   font-family: "ralewayregular", sans-serif; }
+  body section {
+    padding: 20px 0; }
+
+h1, h2, h3, h5 {
+  padding-bottom: 5px;
+  text-transform: uppercase; }
+
+img {
+  width: 100%; }
+
+h3 {
+  font-size: 2.5em; }
+
+h2 {
+  font-size: 1.3em;
+  width: 300px;
+  border-bottom: 5px solid #27c7ab; }
+
+span {
+  color: #27c7ab;
+  font-weight: bold; }
 
 a {
   text-decoration: none;
