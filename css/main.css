@@ -76,13 +76,35 @@ header {
           width: 275px;
           font-size: 1.8em; }
 
+#gallery .images, #gallery .gallery-text {
+  margin-bottom: 20px; }
+#gallery .images {
+  position: relative; }
+  #gallery .images .image-title {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3); }
+    #gallery .images .image-title h4 {
+      width: 175px;
+      border-bottom: 2px solid #27c7ab; }
+#gallery .gallery-text {
+  border: 1px solid lightgray;
+  padding: 15px; }
+  #gallery .gallery-text h4 {
+    text-transform: none;
+    width: 150px;
+    border-bottom: 2px solid #27c7ab; }
+
 body {
   font-size: 14px;
   font-family: "ralewayregular", sans-serif; }
   body section {
     padding: 20px 0; }
 
-h1, h2, h3, h5 {
+h1, h2, h3, h4, h5 {
   padding-bottom: 5px;
   text-transform: uppercase; }
 

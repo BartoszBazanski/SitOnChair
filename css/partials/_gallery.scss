@@ -1,0 +1,29 @@
+#gallery{
+    .images, .gallery-text{
+        margin-bottom: 20px;
+    }
+    .images{
+        position: relative;
+        .image-title{
+            position: absolute;
+            bottom: 20px;
+            left: 15px;
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+            h4{
+                width: 175px;
+                border-bottom: 2px solid $theme-color;
+            }
+        }
+    }
+    .gallery-text{
+        border: 1px solid lightgray;
+        padding: 15px;
+        h4{
+            text-transform: none;
+            width: 150px;
+            border-bottom: 2px solid $theme-color;
+        }
+    }
+}
