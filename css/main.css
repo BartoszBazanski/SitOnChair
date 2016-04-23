@@ -43,7 +43,7 @@ header {
       font-size: 1.2em;
       padding: 16px;
       list-style-type: none;
-      width: 120px;
+      width: calc(100%/3);
       text-align: center; }
       header .navigation li ul {
         display: none; }
@@ -97,6 +97,42 @@ header {
     text-transform: none;
     width: 150px;
     border-bottom: 2px solid #27c7ab; }
+
+#pricing .payment-plan {
+  border: 1px solid lightgray;
+  padding: 20px 0 80px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  height: 450px; }
+  #pricing .payment-plan .payment-name {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #27c7ab; }
+  #pricing .payment-plan .price {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    padding: 30px 10px;
+    margin: 10px auto;
+    text-transform: uppercase; }
+    #pricing .payment-plan .price .price-value {
+      font-size: 2.5em; }
+      #pricing .payment-plan .price .price-value sup {
+        font-size: .5em;
+        vertical-align: super; }
+  #pricing .payment-plan .plan-features li {
+    padding: 10px 0;
+    color: gray;
+    background-color: lightgray; }
+    #pricing .payment-plan .plan-features li:nth-child(even) {
+      background-color: #ececec; }
+  #pricing .payment-plan button {
+    position: absolute;
+    bottom: 20px;
+    width: 150px;
+    left: calc(50% - 75px); }
 
 body {
   font-size: 14px;
