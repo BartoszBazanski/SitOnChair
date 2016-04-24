@@ -16,7 +16,7 @@
   src: url("../fonts/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-regular-webfont.woff2") format("woff2"), url("../fonts/raleway-regular-webfont.woff") format("woff"), url("../fonts/raleway-regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-button {
+.button, button {
   border: none;
   color: white;
   padding: 10px;
@@ -98,41 +98,101 @@ header {
     width: 150px;
     border-bottom: 2px solid #27c7ab; }
 
-#pricing .payment-plan {
-  border: 1px solid lightgray;
-  padding: 20px 0 80px;
-  margin-bottom: 20px;
-  text-align: center;
-  position: relative;
-  height: 450px; }
-  #pricing .payment-plan .payment-name {
-    font-size: 1.2em;
-    text-transform: uppercase;
-    color: #27c7ab; }
-  #pricing .payment-plan .price {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+#pricing {
+  background-color: #ececec; }
+  #pricing .payment-plan {
+    background-color: white;
     border: 1px solid lightgray;
-    padding: 30px 10px;
-    margin: 10px auto;
-    text-transform: uppercase; }
-    #pricing .payment-plan .price .price-value {
-      font-size: 2.5em; }
-      #pricing .payment-plan .price .price-value sup {
-        font-size: .5em;
-        vertical-align: super; }
-  #pricing .payment-plan .plan-features li {
-    padding: 10px 0;
-    color: gray;
-    background-color: lightgray; }
-    #pricing .payment-plan .plan-features li:nth-child(even) {
-      background-color: #ececec; }
-  #pricing .payment-plan button {
-    position: absolute;
-    bottom: 20px;
-    width: 150px;
-    left: calc(50% - 75px); }
+    padding: 20px 0 80px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+    height: 500px; }
+    #pricing .payment-plan .payment-name {
+      font-size: 1.3em;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #27c7ab; }
+    #pricing .payment-plan .price {
+      font-weight: bold;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 1px solid lightgray;
+      padding: 30px 10px;
+      margin: 10px auto;
+      text-transform: uppercase; }
+      #pricing .payment-plan .price .price-value {
+        font-size: 2.5em; }
+        #pricing .payment-plan .price .price-value sup {
+          font-size: .5em;
+          vertical-align: super; }
+    #pricing .payment-plan .plan-features li {
+      font-size: 1.5em;
+      padding: 10px 0;
+      color: gray;
+      background-color: lightgray; }
+      #pricing .payment-plan .plan-features li:nth-child(even) {
+        background-color: #ececec; }
+    #pricing .payment-plan button {
+      position: absolute;
+      bottom: 20px;
+      width: 150px;
+      left: calc(50% - 75px); }
+    #pricing .payment-plan:after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: 1px solid lightgray;
+      background-color: white;
+      border-radius: 50%;
+      top: -35px;
+      left: calc(50% - 25px);
+      z-index: 2; }
+    #pricing .payment-plan:before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: lightgray;
+      border-radius: 50%;
+      top: -22.5px;
+      left: calc(50% - 12.5px);
+      z-index: 3; }
+  #pricing .payment-plan:hover {
+    background-color: #27c7ab;
+    border-color: #27c7ab; }
+    #pricing .payment-plan:hover:after {
+      background-color: #27c7ab;
+      border-color: #27c7ab; }
+    #pricing .payment-plan:hover:before {
+      background-color: white; }
+    #pricing .payment-plan:hover .payment-name {
+      color: white; }
+    #pricing .payment-plan:hover .price {
+      background-color: white;
+      border-color: #27c7ab;
+      color: #27c7ab; }
+    #pricing .payment-plan:hover .plan-features li:nth-child(odd) {
+      background-color: white; }
+    #pricing .payment-plan:hover button {
+      color: #27c7ab;
+      background-color: white; }
+
+footer {
+  padding: 25px 0; }
+  footer p {
+    float: left; }
+  footer .socials {
+    float: right;
+    margin-right: 40px; }
+    footer .socials img {
+      width: 30px;
+      margin: 0 5px; }
+  footer h5 {
+    float: right; }
 
 body {
   font-size: 14px;
