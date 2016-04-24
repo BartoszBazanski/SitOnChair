@@ -122,20 +122,28 @@
         <section id="contact">
             <div class="container">
                 <h2>Kontakt</h2>
-                <form class="col-md-8 col-xs-12">
-                    <input class="col-md-12" placeholder="Imię">
-                    <input class="col-md-12" placeholder="Email">
-                    <textarea class="col-md-12" placeholder="Wiadomość"></textarea>
-                    <input type="checkbox">Zgadam się na przetwarzanie danych osobowych<br>
-                    <input class="button" type="submit" value="Wyślij">
+                <form class="col-md-12 col-xs-12">
+                    <div class="input-text col-md-8">
+                        <input placeholder="Imię">
+                        <input placeholder="Email">
+                        <textarea rows="4" placeholder="Wiadomość"></textarea>
+                    </div>
+                    <div class="input-submit col-md-4">
+                        <img src="images/red_chair.png" alt="Red chair" title="Contact us" />
+                        <div class="checkbox">
+                            <input id="form-ok" type="checkbox">
+                            <label for="form-ok"></label>
+                            <p>Zgadam się na przetwarzanie danych osobowych</p>
+                        </div>
+                        <input class="button" type="submit" value="Wyślij">
+                    </div>
                 </form>
-                <img class="col-md-4" src="images/red_chair.png" alt="Red chair" title="Contact us" />
             </div>
         </section>
         <footer>
             <div class="container">
                 <p>Copyright 2014 | All Rigths Reserved - Sit On Chair</p>
-                <h5>Sit On Chair</h5>
+                <h5>Sit <span>On</span> Chair</h5>
                 <div class="socials">
                     <img src="images/flickr.png" title="Flickr" alt="Social media">
                     <img src="images/vimeo.png" title="Vimeo" alt="Social media">

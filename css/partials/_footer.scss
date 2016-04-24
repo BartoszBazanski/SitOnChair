@@ -1,17 +1,26 @@
 footer{
+    color: gray;
     padding: 25px 0;
+    *{
+        height: 100%;
+    }
     p{
         float: left;
     }
     .socials{
         float: right;
-        margin-right: 40px;
         img{
             width: 30px;
             margin: 0 5px;
         }
     }
     h5{
+        margin: 0 0 0 40px;
+        font-size: 1.5em;
         float: right;
+        span{
+            color: inherit;
+            font-weight: bold;
+        }
     }
 }

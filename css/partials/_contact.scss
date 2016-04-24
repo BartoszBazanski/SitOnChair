@@ -1,0 +1,48 @@
+#contact{
+    .input-text{
+        input, textarea{
+            width: 100%;
+            font-size: 2em;
+            border: 1px solid $theme-color;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+    }
+    .input-submit{
+        * {
+            margin-bottom: 10px;
+        }
+        text-align: center;
+        img, .button{
+            width: 80%;
+        }
+        .button{
+            font-weight: bold;
+            font-size: 1.8em;
+        }
+        .checkbox{
+            display: table;
+            color: gray;
+            font-size: 1.2em;
+            position: relative;
+            #form-ok{
+                visibility: hidden;
+            }
+            #form-ok + label {
+                float: left;
+                margin: 0 10px 0 0;
+                height: 45px;
+                width: 45px;
+                border: 1px solid lightgray;
+                background-color: white;
+            }
+            #form-ok:checked + label{
+                background: url("../images/form_ok.jpg") center no-repeat;
+                background-size: 90%;    
+            }
+            p{
+                text-align: left;
+            }
+        }
+    }
+}

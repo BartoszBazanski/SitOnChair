@@ -181,18 +181,60 @@ header {
       color: #27c7ab;
       background-color: white; }
 
+#contact .input-text input, #contact .input-text textarea {
+  width: 100%;
+  font-size: 2em;
+  border: 1px solid #27c7ab;
+  padding: 10px;
+  margin-bottom: 20px; }
+#contact .input-submit {
+  text-align: center; }
+  #contact .input-submit * {
+    margin-bottom: 10px; }
+  #contact .input-submit img, #contact .input-submit .button {
+    width: 80%; }
+  #contact .input-submit .button {
+    font-weight: bold;
+    font-size: 1.8em; }
+  #contact .input-submit .checkbox {
+    display: table;
+    color: gray;
+    font-size: 1.2em;
+    position: relative; }
+    #contact .input-submit .checkbox #form-ok {
+      visibility: hidden; }
+    #contact .input-submit .checkbox #form-ok + label {
+      float: left;
+      margin: 0 10px 0 0;
+      height: 45px;
+      width: 45px;
+      border: 1px solid lightgray;
+      background-color: white; }
+    #contact .input-submit .checkbox #form-ok:checked + label {
+      background: url("../images/form_ok.jpg") center no-repeat;
+      background-size: 90%; }
+    #contact .input-submit .checkbox p {
+      text-align: left; }
+
 footer {
+  color: gray;
   padding: 25px 0; }
+  footer * {
+    height: 100%; }
   footer p {
     float: left; }
   footer .socials {
-    float: right;
-    margin-right: 40px; }
+    float: right; }
     footer .socials img {
       width: 30px;
       margin: 0 5px; }
   footer h5 {
+    margin: 0 0 0 40px;
+    font-size: 1.5em;
     float: right; }
+    footer h5 span {
+      color: inherit;
+      font-weight: bold; }
 
 body {
   font-size: 14px;
