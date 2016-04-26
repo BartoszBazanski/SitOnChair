@@ -1,5 +1,5 @@
-# SitOnChair
-# Description:
+#SitOnChair
+#### Description:  
 Website about chairs. 
-Main features:
+####Main features:   
 Custom checkbox in contact form.
