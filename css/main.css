@@ -51,7 +51,8 @@ header {
 #jumbotron {
   background: linear-gradient(white, white, white, lightgray); }
   #jumbotron .container {
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     #jumbotron .container .arrows {
       position: absolute;
       display: inline-block;
@@ -59,22 +60,26 @@ header {
       color: #27c7ab;
       line-height: 1;
       top: calc(50% - 45px);
-      cursor: pointer; }
+      cursor: pointer;
+      z-index: 5; }
     #jumbotron .container .arrow-left {
       left: 20px; }
     #jumbotron .container .arrow-right {
       right: 20px; }
     #jumbotron .container .slider {
       padding: 36px;
-      display: table; }
-      #jumbotron .container .slider .slider-element .element-image {
-        text-align: center; }
-      #jumbotron .container .slider .slider-element .element-text {
-        text-align: center;
-        padding: 25px; }
-        #jumbotron .container .slider .slider-element .element-text button {
-          width: 275px;
-          font-size: 1.8em; }
+      height: 500px; }
+      #jumbotron .container .slider .slide {
+        position: absolute;
+        display: table; }
+        #jumbotron .container .slider .slide .element-image {
+          text-align: center; }
+        #jumbotron .container .slider .slide .element-text {
+          text-align: center;
+          padding: 25px; }
+          #jumbotron .container .slider .slide .element-text button {
+            width: 275px;
+            font-size: 1.8em; }
 
 #gallery .images, #gallery .gallery-text {
   margin-bottom: 20px; }

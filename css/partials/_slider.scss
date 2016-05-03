@@ -2,6 +2,7 @@
     background: linear-gradient(white, white, white, lightgray);
     .container{
         position: relative;
+        overflow: hidden;
         .arrows {
             position: absolute;
             display: inline-block;
@@ -10,6 +11,7 @@
             line-height: 1;
             top: calc(50% - 45px);
             cursor: pointer;
+            z-index: 5;
         }
         .arrow-left{
             left: 20px;
@@ -19,8 +21,10 @@
         }
         .slider{
             padding: 36px;
-            display: table;
-            .slider-element{
+            height: 500px;
+            .slide{
+                position: absolute;
+                display: table;
                 .element-image{
                     text-align: center;
                 }

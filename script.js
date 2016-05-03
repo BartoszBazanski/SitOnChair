@@ -4,8 +4,7 @@ var main = function(){
     var arrowLeft = $('.arrow-left');
     var slides = $('.slide');
     slides.siblings('.current').css({
-        left: "0",
-        opacity: "1"
+        left: "0"
     })
     slides.siblings('.slide:not(.current)').css({
         left: "100%",
@@ -60,7 +59,6 @@ var main = function(){
             }, 1000).addClass("current");
         }
     }
-    $('.current').show();
     aboutUs.click(function(){
         $(this).siblings('.sub-menu').slideToggle();
     });
