@@ -20,29 +20,5 @@
             font-weight: bold;
             font-size: 1.8em;
         }
-        .checkbox{
-            display: table;
-            color: gray;
-            font-size: 1.2em;
-            position: relative;
-            #form-ok{
-                visibility: hidden;
-            }
-            #form-ok + label {
-                float: left;
-                margin: 0 10px 0 0;
-                height: 45px;
-                width: 45px;
-                border: 1px solid lightgray;
-                background-color: white;
-            }
-            #form-ok:checked + label{
-                background: url("../images/form_ok.jpg") center no-repeat;
-                background-size: 90%;    
-            }
-            p{
-                text-align: left;
-            }
-        }
     }
 }

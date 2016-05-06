@@ -25,6 +25,26 @@
   font-weight: bold;
   background-color: #27c7ab; }
 
+.checkbox {
+  display: table;
+  color: gray;
+  font-size: 1.2em;
+  position: relative; }
+  .checkbox #form-ok {
+    visibility: hidden; }
+  .checkbox #form-ok + label {
+    float: left;
+    margin: 0 10px 0 0;
+    height: 45px;
+    width: 45px;
+    border: 1px solid lightgray;
+    background-color: white; }
+  .checkbox #form-ok:checked + label {
+    background: url("../images/form_ok.jpg") center no-repeat;
+    background-size: 90%; }
+  .checkbox p {
+    text-align: left; }
+
 header {
   background-color: black;
   font-weight: bold;
@@ -104,7 +124,7 @@ header {
     border-bottom: 2px solid #27c7ab; }
 
 #pricing {
-  background-color: #ececec; }
+  background-color: #ededed; }
   #pricing .payment-plan {
     background-color: white;
     border: 1px solid lightgray;
@@ -139,7 +159,7 @@ header {
       color: gray;
       background-color: lightgray; }
       #pricing .payment-plan .plan-features li:nth-child(even) {
-        background-color: #ececec; }
+        background-color: #ededed; }
     #pricing .payment-plan button {
       position: absolute;
       bottom: 20px;
@@ -201,25 +221,6 @@ header {
   #contact .input-submit .button {
     font-weight: bold;
     font-size: 1.8em; }
-  #contact .input-submit .checkbox {
-    display: table;
-    color: gray;
-    font-size: 1.2em;
-    position: relative; }
-    #contact .input-submit .checkbox #form-ok {
-      visibility: hidden; }
-    #contact .input-submit .checkbox #form-ok + label {
-      float: left;
-      margin: 0 10px 0 0;
-      height: 45px;
-      width: 45px;
-      border: 1px solid lightgray;
-      background-color: white; }
-    #contact .input-submit .checkbox #form-ok:checked + label {
-      background: url("../images/form_ok.jpg") center no-repeat;
-      background-size: 90%; }
-    #contact .input-submit .checkbox p {
-      text-align: left; }
 
 footer {
   color: gray;
@@ -240,6 +241,51 @@ footer {
     footer h5 span {
       color: inherit;
       font-weight: bold; }
+
+#calculator form .option-selection select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px 5px;
+  color: gray;
+  font-size: 25px;
+  border-color: #27c7ab;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../images/dropdown.png") calc(100% - 10px) center no-repeat; }
+#calculator form .option-selection .checkbox p {
+  float: left;
+  font-size: 30px; }
+#calculator form .summary h2 {
+  width: 100%;
+  text-align: right; }
+#calculator form .summary .summary-panel .panel-left {
+  width: 65%;
+  float: left; }
+#calculator form .summary .summary-panel .panel-right {
+  width: 35%;
+  float: right;
+  border-left: 1px solid gray; }
+  #calculator form .summary .summary-panel .panel-right .value {
+    padding: 15px 5px;
+    margin-bottom: 10px; }
+#calculator form .summary .summary-panel .sum {
+  padding: 10px 5px;
+  clear: both;
+  border-top: 1px solid gray; }
+  #calculator form .summary .summary-panel .sum .sum-label {
+    font-size: 20px;
+    text-transform: uppercase; }
+#calculator form .summary .button {
+  font-size: 25px;
+  width: 250px; }
+#calculator form .middle-image img {
+  margin: 25px 0; }
+
+.chair {
+  color: #27c7ab;
+  font-size: 18px;
+  font-weight: bold; }
 
 body {
   font-size: 14px;
