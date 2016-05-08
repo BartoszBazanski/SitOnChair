@@ -16,6 +16,11 @@
                 border-bottom: 2px solid $theme-color;
             }
         }
+        &:hover{
+            .image-title{
+                display: none;
+            }
+        }
     }
     .gallery-text{
         border: 1px solid lightgray;

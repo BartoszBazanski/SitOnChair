@@ -15,8 +15,8 @@
                 <h1>Sit <span>On</span> Chair</h1>
                 <ul class="navigation col-xs-12 col-md-6">
                     <li>
-                        <a href="#">O Firmie</a>
-                        <ul>
+                        <a class="about" href="#">O Firmie</a>
+                        <ul class="sub-menu">
                             <li><a href="#">Aktualnosci</a></li>
                             <li><a href="#">Nasz Team</a></li>
                             <li><a href="#">Historia</a></li>
@@ -146,26 +146,26 @@
                 <form>
                     <div class="option-selection col-md-4 col-xs-12">
                         <h2>Skomponuj swoje krzesło</h2>
-                        <select placeholder="Wybierz rodzaj">
+                        <select  id="chair-pick">
                             <option value="" disabled selected hidden>Wybierz rodzaj</option>
                             <option value="clair">Clair</option>
                             <option value="margarita">Margarita</option>
                             <option value="selena">Selena</option>
                         </select>
-                        <select placeholder="Wybierz kolor">
+                        <select id="color-pick">
                             <option value="" disabled selected hidden>Wybierz kolor</option>
                             <option value="red">Czerwony</option>
                             <option value="black">Czarny</option>
                             <option value="orange">Pomarańczowy</option>
                         </select>
-                        <select placeholder="Wybierz materiał">
+                        <select id="fabric-pick">
                             <option value="" disabled selected hidden>Wybierz materiał</option>
                             <option value="fabric">Tkanina</option>
                             <option value="leather">Skóra</option>
                         </select>
-                        <div class="checkbox">
-                            <input id="form-ok" type="checkbox">
-                            <label for="form-ok"></label>
+                        <div class="checkbox-section">
+                            <input class="checkbox" id="transport" type="checkbox">
+                            <label for="transport"></label>
                             <p>Transport</p>
                         </div>
                     </div>
@@ -178,13 +178,13 @@
                             <div class="panel-left">
                                 <div class="chair option">Twój fotel</div>
                                 <div class="color option"></div>
-                                <div class="pattern option"></div>
+                                <div class="fabric option"></div>
                                 <div class="transport option"></div>
                             </div>
                             <div class="panel-right">
                                 <div class="chair value"></div>
                                 <div class="color value"></div>
-                                <div class="pattern value"></div>
+                                <div class="fabric value"></div>
                                 <div class="transport value"></div>
                             </div>
                             <div class="sum">
@@ -208,8 +208,8 @@
                     </div>
                     <div class="input-submit col-md-4">
                         <img src="images/red_chair.png" alt="Red chair" title="Contact us" />
-                        <div class="checkbox">
-                            <input id="form-ok" type="checkbox">
+                        <div class="checkbox-section">
+                            <input class="checkbox" id="form-ok" type="checkbox">
                             <label for="form-ok"></label>
                             <p>Zgadam się na przetwarzanie danych osobowych</p>
                         </div>

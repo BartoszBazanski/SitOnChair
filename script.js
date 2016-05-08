@@ -1,4 +1,4 @@
-var main = function(){
+$(function(){
     var aboutUs = $('li a.about');
     var arrowRight = $('.arrow-right');
     var arrowLeft = $('.arrow-left');
@@ -10,7 +10,9 @@ var main = function(){
         left: "100%",
         opacity: "0"
     })
+
     // Slider
+
     function slideLeft(element){
         var currentSlide = element.siblings('.current');
         element.siblings('.slide:not(.current)').css({
@@ -59,77 +61,60 @@ var main = function(){
             }, 1000).addClass("current");
         }
     }
-    aboutUs.click(function(){
-        $(this).siblings('.sub-menu').slideToggle();
-    });
-    var imageBoxes = $('.box12');
-    imageBoxes.on('mouseover', function(){
-        $(this).children('.panel').fadeOut('fast');
-    });
-    imageBoxes.on('mouseout',function(){
-        $(this).children('.panel').fadeIn('fast');
-    });
     arrowRight.click(function(){
         slideLeft(slides);
     })
     arrowLeft.click(function(){
         slideRight(slides);
     })
-    //Compose your chair
-    //Dropdown lists
-    var dropdownBlueArrows = $('.dropdown').find('.blue-arrow');
-    dropdownBlueArrows.click(function(){
-        $(this).closest('dt').siblings('dd').slideToggle('fast');
+
+    //Dropdown in navigation
+
+    aboutUs.click(function(){
+        $(this).siblings('.sub-menu').slideToggle();
     });
-    var chairPick = $('#chair-pick');
-    var colorPick = $('#color-pick');
-    var fabricPick = $('#fabric-pick');
+
+    //Compose your chair
+    //Option prices
+    var prices = {
+        chair: [1200, 1000, 750],
+        color: [50, 75, 100],
+        fabric: [250, 350],
+        transport: 500
+    }
+    var colorPick = $('#color-pick').get(0);
+    var fabricPick = $('#fabric-pick').get(0);
     var transportPick = $('#transport');
     function autoSumCost(){
-        var chairSum = $('#chair-sum');
-        var chairPrice = parseInt($('#chair-price').text(), 10) || 0;
-        var colorPrice = parseInt($('#color-price').text(), 10) || 0;
-        var fabricPrice = parseInt($('#fabric-price').text(), 10) || 0;
-        var transportPrice = parseInt($('#transport-price').text(), 10) || 0;
+        var chairSum = $('.sum-value');
+        var chairPrice = parseInt($('.chair.value').text(), 10) || 0;
+        var colorPrice = parseInt($('.color.value').text(), 10) || 0;
+        var fabricPrice = parseInt($('.fabric.value').text(), 10) || 0;
+        var transportPrice = parseInt($('.transport.value').text(), 10) || 0;
         var sum = chairPrice + colorPrice + fabricPrice + transportPrice;
         chairSum.text(sum);
     }
-    fabricPick.find('li').click(function(){
-        var option = $(this).data().fabric;
-        var price = $(this).data().fabricPrice;
-        $(this).closest('dl').find('dt span').text(option).css('color', 'black');
-        $('#chair-fabric').text(option);
-        $('#fabric-price').text(price);
-        autoSumCost();
-        $(this).closest('dd').slideToggle('fast');
-    })
-    colorPick.find('li').click(function(){
-        var option = $(this).data().color;
-        var price = $(this).data().colorPrice;
-        $(this).closest('dl').find('dt span').text(option).css('color', 'black');
-        $('#chair-color').text(option);
-        $('#color-price').text(price);
-        autoSumCost();
-        $(this).closest('dd').slideToggle('fast');
-    })
-    chairPick.find('li').click(function(){
-        var option = $(this).data().chair;
-        var price = $(this).data().chairPrice;
-        $(this).closest('dl').find('dt span').text(option).css('color', 'black');
-        $('#chair-name').text(option);
-        $('#chair-price').text(price);
-        autoSumCost();
-        $(this).closest('dd').slideToggle('fast');
-    })
+    function updateOnSelection(select){
+        $("#" + select + "-pick").change(function(){
+            var options = $(this).get(0).options;
+            var optionIndex = $(this).get(0).selectedIndex;
+            var price = prices[select][optionIndex - 1];
+            $("." + select + ".option").text(options[optionIndex].text);
+            $("." + select + ".value").text(price);
+            autoSumCost();
+        });
+    }
+    updateOnSelection("chair");
+    updateOnSelection("color");
+    updateOnSelection("fabric");
     transportPick.click(function(){
         if($(this).is(':checked')){
-            $('#transport-yes p').show();
-            $('#transport-price').text($(this).data().transportPrice);
+            $('.transport.option').text('Transport');
+            $('.transport.value').text(prices.transport);
         } else {
-            $('#transport-yes p').hide();
-            $('#transport-price').text("");
+            $('.transport.option').text('');
+            $('.transport.value').text('');
         }
         autoSumCost();
     })
-};
-$(document).ready(main);
+});

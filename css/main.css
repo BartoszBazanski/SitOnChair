@@ -25,24 +25,24 @@
   font-weight: bold;
   background-color: #27c7ab; }
 
-.checkbox {
+.checkbox-section {
   display: table;
   color: gray;
   font-size: 1.2em;
   position: relative; }
-  .checkbox #form-ok {
+  .checkbox-section .checkbox {
     visibility: hidden; }
-  .checkbox #form-ok + label {
+  .checkbox-section .checkbox + label {
     float: left;
     margin: 0 10px 0 0;
     height: 45px;
     width: 45px;
     border: 1px solid lightgray;
     background-color: white; }
-  .checkbox #form-ok:checked + label {
+  .checkbox-section .checkbox:checked + label {
     background: url("../images/form_ok.jpg") center no-repeat;
     background-size: 90%; }
-  .checkbox p {
+  .checkbox-section p {
     text-align: left; }
 
 header {
@@ -59,14 +59,35 @@ header {
     float: right;
     margin: 0; }
     header .navigation li {
+      position: relative;
       float: left;
       font-size: 1.2em;
       padding: 16px;
       list-style-type: none;
       width: calc(100%/3);
       text-align: center; }
-      header .navigation li ul {
-        display: none; }
+      header .navigation li .sub-menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: calc(50% - 75px);
+        background-color: black;
+        z-index: 5; }
+        header .navigation li .sub-menu li {
+          font-size: 1em;
+          float: none;
+          width: 100%; }
+        header .navigation li .sub-menu:before {
+          content: "";
+          position: absolute;
+          top: -15px;
+          left: calc(50% - 15px);
+          width: 0;
+          height: 0;
+          display: inline-block;
+          border-bottom: 15px solid black;
+          border-left: 15px solid transparent;
+          border-right: 15px solid transparent; }
 
 #jumbotron {
   background: linear-gradient(white, white, white, lightgray); }
@@ -115,6 +136,8 @@ header {
     #gallery .images .image-title h4 {
       width: 175px;
       border-bottom: 2px solid #27c7ab; }
+  #gallery .images:hover .image-title {
+    display: none; }
 #gallery .gallery-text {
   border: 1px solid lightgray;
   padding: 15px; }
@@ -124,7 +147,7 @@ header {
     border-bottom: 2px solid #27c7ab; }
 
 #pricing {
-  background-color: #ededed; }
+  background-color: #ececec; }
   #pricing .payment-plan {
     background-color: white;
     border: 1px solid lightgray;
@@ -159,7 +182,7 @@ header {
       color: gray;
       background-color: lightgray; }
       #pricing .payment-plan .plan-features li:nth-child(even) {
-        background-color: #ededed; }
+        background-color: #ececec; }
     #pricing .payment-plan button {
       position: absolute;
       bottom: 20px;
@@ -253,30 +276,36 @@ footer {
   -moz-appearance: none;
   appearance: none;
   background: url("../images/dropdown.png") calc(100% - 10px) center no-repeat; }
-#calculator form .option-selection .checkbox p {
+#calculator form .option-selection .checkbox-section p {
   float: left;
   font-size: 30px; }
 #calculator form .summary h2 {
   width: 100%;
   text-align: right; }
-#calculator form .summary .summary-panel .panel-left {
-  width: 65%;
-  float: left; }
-#calculator form .summary .summary-panel .panel-right {
-  width: 35%;
-  float: right;
-  border-left: 1px solid gray; }
-  #calculator form .summary .summary-panel .panel-right .value {
-    padding: 15px 5px;
-    margin-bottom: 10px; }
-#calculator form .summary .summary-panel .sum {
-  padding: 10px 5px;
-  clear: both;
-  border-top: 1px solid gray; }
-  #calculator form .summary .summary-panel .sum .sum-label {
-    font-size: 20px;
-    text-transform: uppercase; }
+#calculator form .summary .summary-panel {
+  margin-bottom: 15px; }
+  #calculator form .summary .summary-panel .panel-left {
+    width: 65%;
+    float: left;
+    border-right: 1px solid gray; }
+  #calculator form .summary .summary-panel .panel-right {
+    text-align: right;
+    width: 35%;
+    float: right; }
+  #calculator form .summary .summary-panel .sum {
+    padding: 10px 5px;
+    clear: both;
+    border-top: 1px solid gray; }
+    #calculator form .summary .summary-panel .sum .sum-label {
+      float: left;
+      font-size: 20px;
+      text-transform: uppercase; }
+    #calculator form .summary .summary-panel .sum .sum-value {
+      float: right; }
 #calculator form .summary .button {
+  margin-top: 30px;
+  display: block;
+  clear: both;
   font-size: 25px;
   width: 250px; }
 #calculator form .middle-image img {
@@ -286,6 +315,10 @@ footer {
   color: #27c7ab;
   font-size: 18px;
   font-weight: bold; }
+
+.value, .option {
+  padding: 15px 5px;
+  height: 50px; }
 
 body {
   font-size: 14px;

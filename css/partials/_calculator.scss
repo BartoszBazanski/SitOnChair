@@ -1,68 +1,77 @@
 #calculator{
-	form{
-		.option-selection{
-			select{
-				width: 100%;
-				margin-bottom: 15px;
-				padding: 10px 5px;
-				color: gray;
-				font-size: 25px;
-				border-color: $theme-color;
-				-webkit-appearance: none;
-			    -moz-appearance: none;
-			    appearance: none;
-			    background: url("../images/dropdown.png") calc(100% - 10px) center no-repeat;
-			}
-			.checkbox{
-				p{
-					float: left;
-					font-size: 30px;
-				}
-			}
-		}
-		.summary{
-			h2{	
-				width: 100%;
-				text-align: right;
-			}
-			.summary-panel{
-				.panel-left{
-					width: 65%;
-					float: left;
-				}
-				.panel-right{
-					width: 35%;
-					float: right;
-					border-left: 1px solid gray;
-					.value{
-						padding: 15px 5px;
-						margin-bottom: 10px;
-					}
-				}
-				.sum{
-					padding: 10px 5px;
-					clear: both;
-					border-top: 1px solid gray;
-					.sum-label{
-						font-size: 20px;
-						text-transform: uppercase;
-					}
-				}
-			}
-			.button {
-				font-size: 25px;
-				width: 250px;
-			}
-		}
-		.middle-image{
-			img{
-				margin: 25px 0;
-			}
-		}
-	}
+    form{
+        .option-selection{
+            select{
+                width: 100%;
+                margin-bottom: 15px;
+                padding: 10px 5px;
+                color: gray;
+                font-size: 25px;
+                border-color: $theme-color;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background: url("../images/dropdown.png") calc(100% - 10px) center no-repeat;
+            }
+            .checkbox-section{
+                p{
+                    float: left;
+                    font-size: 30px;
+                }
+            }
+        }
+        .summary{
+            h2{	
+                width: 100%;
+                text-align: right;
+            }
+            .summary-panel{
+                margin-bottom: 15px;
+                .panel-left{
+                    width: 65%;
+                    float: left;
+                    border-right: 1px solid gray;
+                }
+                .panel-right{
+                    text-align: right;
+                    width: 35%;
+                    float: right;
+                }
+                .sum{
+                    padding: 10px 5px;
+                    clear: both;
+                    border-top: 1px solid gray;
+                    .sum-label{
+                        float: left;
+                        font-size: 20px;
+                        text-transform: uppercase;
+                    }
+                    .sum-value{
+                        float: right;
+                    }
+                }
+            }
+            .button {
+                margin-top: 30px;
+                display: block;
+                clear: both;
+                font-size: 25px;
+                width: 250px;
+            }
+        }
+        .middle-image{
+            img{
+                margin: 25px 0;
+            }
+        }
+    }
 }
 .chair{
-	color: $theme-color;
-	font-size: 18px;
-	font-weight: bold;
+    color: $theme-color;
+    font-size: 18px;
+    font-weight: bold;
+}
+.value, .option{
+    padding: 15px 5px;
+    height: 50px;
 }
